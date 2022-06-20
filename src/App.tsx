@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery } from 'react-query';
 
 import Editor from './components/Editor';
+import { BASE_POST_URL } from './routes';
 
 interface Post {
   id: number;
@@ -9,7 +10,7 @@ interface Post {
 }
 
 async function getPosts(): Promise<Post[]> {
-  const response = await fetch('https://kaku.be/api/v1/posts');
+  const response = await fetch(BASE_POST_URL);
   const { posts = [] } = await response.json();
   return posts;
 }
@@ -43,6 +44,9 @@ function App() {
               </button>
             </li>
           ))}
+          <li key="create-post">
+            <button onClick={() => setSelectedPost()}>Create new post</button>
+          </li>
         </ul>
       </div>
       <Editor postId={selectedPost} />

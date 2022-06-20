@@ -1,7 +1,7 @@
 import { rest } from 'msw';
 
 export const handlers = [
-  rest.get('https://kaku.be/api/v1/posts', (req, res, ctx) => {
+  rest.get('https://localhost:3000/api/v1/posts', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -14,7 +14,7 @@ export const handlers = [
       })
     );
   }),
-  rest.get('https://kaku.be/api/v1/posts/:id', (req, res, ctx) => {
+  rest.get('https://localhost:3000/api/v1/posts/:id', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({

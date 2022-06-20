@@ -11,6 +11,8 @@ const client = new QueryClient();
 async function prepare() {
   if (import.meta.env.DEV) {
     return worker.start();
+    // TODO: We can uncomment this once the connection is live
+    // return Promise.resolve();
   }
 
   return Promise.resolve();
