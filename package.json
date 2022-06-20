@@ -1,0 +1,37 @@
+{
+  "name": "kaku-client",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@uiw/react-md-editor": "^3.14.4",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-query": "^3.39.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "autoprefixer": "^10.4.7",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.2",
+    "msw": "^0.42.1",
+    "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
+    "tailwindcss": "^3.1.3",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.9"
+  },
+  "msw": {
+    "workerDirectory": "public"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,css,md}": "prettier --write"
+  }
+}
