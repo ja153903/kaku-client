@@ -45,7 +45,9 @@ function App() {
             </li>
           ))}
           <li key="create-post">
-            <button onClick={() => setSelectedPost()}>Create new post</button>
+            <button onClick={() => setSelectedPost(undefined)}>
+              Create new post
+            </button>
           </li>
         </ul>
       </div>
