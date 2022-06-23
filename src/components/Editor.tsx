@@ -119,11 +119,7 @@ function EditPostEditor({ postId }: { postId: number }) {
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    try {
-      await mutation.mutate({ id: postId, content: text, title });
-    } catch (e) {
-      console.error(e);
-    }
+    mutation.mutate({ id: postId, content: text, title });
   };
 
   return (
